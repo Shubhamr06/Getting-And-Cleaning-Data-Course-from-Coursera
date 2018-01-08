@@ -48,4 +48,8 @@ colnames(alldata) <- modify
 #From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 alldataFinal <- melt(alldata, id=c("subject", "activity"))
 alldataFinal <- alldataFinal[grep("mean\\(\\)", alldataFinal$variable),]
-write.table(alldataFinal, "tidydata.txt")
+alldataFinalTidy <- dcast(alldataFinal, subject + activity ~ variable, mean)
+
+#Export final results
+write.table(alldataFinalTidy, "tidydata.txt", row.names = FALSE, quote = FALSE)
+
