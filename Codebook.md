@@ -28,3 +28,12 @@
   * GyroJerk: angular velocity jerk (derivation of the angular velocity in time)
   * XYZ: X, Y, Z directions
   * Mag: magnitude
+* Modified features --
+  * Substitue "-" to space
+  * Substitue "std" to "standard deviation"
+  * Substitue "^t" to "time domain"
+  * Substitue "^f" to "frequency domain"
+  * Substitue "Jerk" to jerk signal
+  * Substitue "Gyro" to "gyroscope"
+  * Substitue "BodyBody" to "Body"
+  * Substitue "Mag" to "Euclidean norm"
