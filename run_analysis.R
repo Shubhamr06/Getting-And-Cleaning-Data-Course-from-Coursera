@@ -28,7 +28,7 @@ alldata <- alldata[, grep("mean\\(\\)|std\\(\\)|subject|activity", colnames(alld
 
 #Substitute activity number with activity name
 activitylabel <- read.table("activity_labels.txt")
-alldata$activitylabel <- factor(alldata$activity, levels = activitylabel[, 1], labels = activitylabel[,2])
+alldata$activity <- factor(alldata$activity, levels = activitylabel[, 1], labels = activitylabel[,2])
 
 #Appropriately labels the data set with descriptive variable names.
 modify <- colnames(alldata)
@@ -46,6 +46,6 @@ modify <- gsub("BodyBody", "Body", modify)
 colnames(alldata) <- modify
 
 #From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-alldataFinal <- melt(alldata, id=c("subject", "activitylabel"))
+alldataFinal <- melt(alldata, id=c("subject", "activity"))
 alldataFinal <- alldataFinal[grep("mean\\(\\)", alldataFinal$variable),]
 write.table(alldataFinal, "tidydata.txt")
