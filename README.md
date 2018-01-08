@@ -8,5 +8,5 @@
 5. Extract features columns with mean and std
 6. Substitute activity number to activity name
 7. Appropriately labels the data set with descriptive variable names
-8. From the data set in step 7, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-9. Export final dataset
+8. From the data set in step 7, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+9. Export final dataset called `tidydata.txt`
